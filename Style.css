@@ -1,0 +1,96 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f4f8;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Loading Spinner */
+.spinner {
+    width: 55px;
+    height: 55px;
+    border: 6px solid #ddd;
+    border-top: 6px solid #007bff;
+    border-radius: 50%;
+    margin: 20px auto;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Card Hover Effect */
+.card {
+    background: white;
+    width: 300px;
+    padding: 30px;
+    margin: 40px auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+}
+
+.card h2 {
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: #555;
+    line-height: 1.5;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+    .card:hover {
+        transform: none;
+    }
+}
